@@ -55,7 +55,7 @@ router.patch('/:id', async (req, res) => {
             { _id: req.params.id },
             { $set: { skater1: ObjectId(req.body.skater1Id), skater2: ObjectId(req.body.skater2Id) }}
         );
-        return res.status(202).send(`Skater updated`);
+        return res.status(202).send(`Pair updated`);
     } catch (err) {
         return res.status(404).send({
             message: err.message
